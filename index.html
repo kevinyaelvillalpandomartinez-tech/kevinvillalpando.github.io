@@ -3,83 +3,219 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kevin Villalpando | Data Analyst</title>
+<title>Kevin Villalpando | Data Analyst Portfolio</title>
 
 <style>
-.foto{
-width:180px;
-height:180px;
-object-fit:cover;
-border-radius:50%;
-border:5px solid white;
-margin-bottom:20px;
-box-shadow:0 10px 25px rgba(0,0,0,.30);
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
 }
+
 body{
 font-family:Arial, Helvetica, sans-serif;
-margin:0;
-background:#0f172a;
+background:#0d0d0d;
 color:white;
-line-height:1.6;
+line-height:1.7;
 }
 
 header{
-padding:60px 20px;
+width:100%;
+height:420px;
+background:url('banner-data.jpg') center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
 text-align:center;
-background:linear-gradient(135deg,#1e3a8a,#2563eb);
+padding:20px;
+}
+
+header .overlay{
+background:rgba(0,0,0,.45);
+padding:30px 50px;
+border-radius:10px;
 }
 
 header h1{
-font-size:48px;
-margin:0;
+font-size:70px;
+font-weight:800;
+letter-spacing:2px;
+}
+
+header h1 span{
+color:#33aaff;
 }
 
 header p{
-font-size:20px;
-opacity:.9;
+font-size:32px;
+margin-top:10px;
+color:#ddd;
 }
 
-.container{
-max-width:1100px;
+section{
+max-width:1200px;
 margin:auto;
-padding:30px;
+padding:80px 30px;
 }
 
-.card{
-background:#1e293b;
-padding:25px;
-margin:20px 0;
-border-radius:14px;
-box-shadow:0 10px 20px rgba(0,0,0,.25);
+.title{
+text-align:center;
+font-size:52px;
+margin-bottom:60px;
+font-weight:700;
 }
 
-h2{
-color:#60a5fa;
-}
-
-.grid{
+.about{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:20px;
+grid-template-columns:1.5fr 1fr;
+gap:50px;
+align-items:center;
 }
 
-a{
-color:#93c5fd;
+.about img{
+width:100%;
+max-width:320px;
+border-radius:6px;
+}
+
+.about h2{
+font-size:48px;
+margin-bottom:25px;
+}
+
+.about p{
+font-size:22px;
+color:#ddd;
+margin-bottom:20px;
+}
+
+.about ul{
+padding-left:20px;
+}
+
+.about li{
+font-size:20px;
+margin-bottom:12px;
+color:#ddd;
+}
+
+.links a{
+display:inline-block;
+margin-right:20px;
+margin-top:20px;
+font-size:22px;
+color:#66b3ff;
 text-decoration:none;
 }
 
-.btn{
-display:inline-block;
-padding:12px 20px;
-background:#2563eb;
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:40px;
+text-align:center;
+margin-top:40px;
+}
+
+.skill{
+background:#141414;
+padding:30px;
+border-radius:12px;
+}
+
+.skill img{
+height:90px;
+object-fit:contain;
+margin-bottom:15px;
+}
+
+.skill h3{
+font-size:24px;
+}
+
+.projects{
+display:grid;
+gap:60px;
+}
+
+.project{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.project img{
+width:100%;
 border-radius:8px;
-margin-top:10px;
+}
+
+.project h3{
+font-size:34px;
+margin-bottom:15px;
+}
+
+.project p{
+font-size:22px;
+color:#ddd;
+margin-bottom:15px;
+}
+
+.project a{
+font-size:22px;
+color:#66b3ff;
+text-decoration:none;
 }
 
 footer{
 text-align:center;
-padding:30px;
-opacity:.7;
+padding:60px 20px;
+font-size:42px;
+font-weight:700;
+}
+
+@media(max-width:900px){
+
+header{
+height:auto;
+padding:80px 20px;
+}
+
+header h1{
+font-size:42px;
+}
+
+header p{
+font-size:22px;
+}
+
+.about,
+.project{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.about img{
+margin:auto;
+}
+
+.title{
+font-size:38px;
+}
+
+.about h2{
+font-size:36px;
+}
+
+.project h3{
+font-size:28px;
+}
+
+.about p,
+.about li,
+.project p{
+font-size:18px;
+}
 }
 </style>
 </head>
@@ -87,69 +223,143 @@ opacity:.7;
 <body>
 
 <header>
-
-<img src="foto-perfil.jpg" alt="Kevin Villalpando" class="foto">
-
-<h1>Kevin Villalpando</h1>
-
-<p>Junior Data Analyst | SQL | Python | Power BI | Excel</p>
-
-<a class="btn" href="#proyectos">Ver Proyectos</a>
-
+<div class="overlay">
+<h1>KEVIN <span>DATA ANALYST</span></h1>
+<p>Turning Data Into Insights</p>
+</div>
 </header>
-<div class="container">
 
-<section class="card">
-<h2>Sobre mí</h2>
+<section>
+<div class="title">Kevin Villalpando | Data Analyst Portfolio</div>
+
+<div class="about">
+
+<div>
+<h2>Professional Profile</h2>
+
 <p>
-Analista de datos junior enfocado en convertir información en decisiones estratégicas.
-Experiencia en dashboards, limpieza de datos, KPIs comerciales y análisis de negocio.
-Mentalidad orientada a resultados, crecimiento y mejora continua.
+Junior Data Analyst with solid foundations in business analytics, SQL, Python and dashboards.
+Focused on transforming raw data into clear insights that support strategic decisions.
 </p>
-</section>
 
-<section class="card">
-<h2>Habilidades</h2>
-<p>SQL • Python • Pandas • Power BI • Excel • Google Sheets • Visualización • KPIs</p>
-</section>
+<ul>
+<li>Python: Pandas, NumPy, Matplotlib</li>
+<li>SQL: Queries, joins, reporting</li>
+<li>Power BI: KPI dashboards</li>
+<li>Excel: Pivot tables, formulas, analysis</li>
+<li>Problem Solving & Business Thinking</li>
+</ul>
 
-<section class="card" id="proyectos">
-<h2>Proyectos Destacados</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Dashboard Ejecutivo Walmart</h3>
-<p>Diseño de dashboard con KPIs de ventas para toma de decisiones.</p>
-<a href="#">Ver proyecto</a>
+<div class="links">
+<a href="#">LinkedIn</a>
+<a href="#">GitHub</a>
+<a href="#">Email</a>
+</div>
 </div>
 
-<div class="card">
-<h3>Análisis de Tráfico Urbano</h3>
-<p>Estudio de congestión vs PIB y población utilizando Python y Pandas.</p>
-<a href="#">Ver proyecto</a>
-</div>
-
-<div class="card">
-<h3>Limpieza de Datos Comerciales</h3>
-<p>Normalización, imputación y preparación de datasets para análisis.</p>
-<a href="#">Ver proyecto</a>
+<div>
+<img src="foto-perfil.jpg">
 </div>
 
 </div>
 </section>
 
-<section class="card">
-<h2>Contacto</h2>
-<p>Email: tucorreo@gmail.com</p>
-<p>LinkedIn: <a href="#">Tu LinkedIn</a></p>
-<p>GitHub: <a href="#">Tu GitHub</a></p>
-</section>
+<section>
+<div class="title">Technical & Professional Skills</div>
+
+<div class="skills-grid">
+
+<div class="skill">
+<img src="excel.png">
+<h3>Excel</h3>
+</div>
+
+<div class="skill">
+<img src="python.png">
+<h3>Python</h3>
+</div>
+
+<div class="skill">
+<img src="powerbi.png">
+<h3>Power BI</h3>
+</div>
+
+<div class="skill">
+<img src="pandas.png">
+<h3>Pandas</h3>
+</div>
+
+<div class="skill">
+<img src="sql.png">
+<h3>SQL</h3>
+</div>
 
 </div>
+</section>
+
+<section>
+<div class="title">Featured Projects</div>
+
+<div class="projects">
+
+<div class="project">
+
+<div>
+<h3>Urban Mobility & Economic Productivity</h3>
+<p>
+Analysis of traffic congestion, GDP and population in LATAM cities using Python.
+Detect high-opportunity cities for infrastructure investment.
+</p>
+<a href="#">Project Summary</a>
+</div>
+
+<div>
+<img src="project1.png">
+</div>
+
+</div>
+
+<div class="project">
+
+<div>
+<h3>Sales Dashboard Walmart</h3>
+<p>
+Executive dashboard with KPIs, trends and strategic recommendations built in Power BI.
+</p>
+<a href="#">Project Summary</a>
+</div>
+
+<div>
+<img src="project2.png">
+</div>
+
+</div>
+
+<div class="project">
+
+<div>
+<h3>Customer SQL Analysis</h3>
+<p>
+Advanced SQL queries for retention, customer behavior and business insights.
+</p>
+<a href="#">Project Summary</a>
+</div>
+
+<div>
+<img src="project3.png">
+</div>
+
+</div>
+
+</div>
+</section>
 
 <footer>
-2026 | Kevin Villalpando
+Thanks!
+</footer>
+
+</body>
+</html>
 </footer>
 
 </body>
