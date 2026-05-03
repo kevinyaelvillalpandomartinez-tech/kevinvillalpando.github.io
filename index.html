@@ -65,7 +65,15 @@ font-size:52px;
 margin-bottom:60px;
 font-weight:700;
 }
-
+.foto{
+width:180px;
+height:180px;
+object-fit:cover;
+border-radius:50%;
+border:5px solid white;
+margin-bottom:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.30);
+}
 .about{
 display:grid;
 grid-template-columns:1.5fr 1fr;
@@ -223,8 +231,11 @@ font-size:18px;
 <body>
 
 <header>
+<div class="foto">
+  <img src="foto-perfil.jpg" alt="Kevin Villalpando" class="foto">
+</div>
 <div class="overlay">
-<h1>KEVIN <span>DATA ANALYST</span></h1>
+<h1>Kevin Yael Villalpando Martinez<span>DATA ANALYST</span></h1>
 <p>Transformando datos en decisiones</p>
 </div>
 </header>
