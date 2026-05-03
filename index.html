@@ -1,60 +1,142 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kevin Villalpando | Data Analyst</title>
+
 <style>
 body{
-font-family:Arial;
-max-width:900px;
+font-family:Arial, Helvetica, sans-serif;
+margin:0;
+background:#0f172a;
+color:white;
+line-height:1.6;
+}
+
+header{
+padding:60px 20px;
+text-align:center;
+background:linear-gradient(135deg,#1e3a8a,#2563eb);
+}
+
+header h1{
+font-size:48px;
+margin:0;
+}
+
+header p{
+font-size:20px;
+opacity:.9;
+}
+
+.container{
+max-width:1100px;
 margin:auto;
 padding:30px;
-background:#f5f5f5;
 }
-section{
-background:white;
-padding:20px;
+
+.card{
+background:#1e293b;
+padding:25px;
 margin:20px 0;
-border-radius:10px;
-box-shadow:0 2px 8px rgba(0,0,0,.1);
+border-radius:14px;
+box-shadow:0 10px 20px rgba(0,0,0,.25);
 }
-h1,h2{
-color:#1d4ed8;
+
+h2{
+color:#60a5fa;
 }
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
 a{
-color:#2563eb;
+color:#93c5fd;
 text-decoration:none;
+}
+
+.btn{
+display:inline-block;
+padding:12px 20px;
+background:#2563eb;
+border-radius:8px;
+margin-top:10px;
+}
+
+footer{
+text-align:center;
+padding:30px;
+opacity:.7;
 }
 </style>
 </head>
+
 <body>
 
-<section>
+<header>
 <h1>Kevin Villalpando</h1>
-<p>Junior Data Analyst | SQL | Python | Power BI</p>
-</section>
+<p>Junior Data Analyst | SQL | Python | Power BI | Excel</p>
+<a class="btn" href="#proyectos">Ver Proyectos</a>
+</header>
 
-<section>
+<div class="container">
+
+<section class="card">
 <h2>Sobre mí</h2>
-<p>Soy analista de datos junior enfocado en transformar datos en decisiones estratégicas. Experiencia en dashboards, limpieza de datos y análisis comercial.</p>
+<p>
+Analista de datos junior enfocado en convertir información en decisiones estratégicas.
+Experiencia en dashboards, limpieza de datos, KPIs comerciales y análisis de negocio.
+Mentalidad orientada a resultados, crecimiento y mejora continua.
+</p>
 </section>
 
-<section>
-<h2>Proyectos</h2>
+<section class="card">
+<h2>Habilidades</h2>
+<p>SQL • Python • Pandas • Power BI • Excel • Google Sheets • Visualización • KPIs</p>
+</section>
 
-<h3>Dashboard de Ventas Walmart</h3>
-<p>KPIs comerciales y visualización ejecutiva.</p>
+<section class="card" id="proyectos">
+<h2>Proyectos Destacados</h2>
 
+<div class="grid">
+
+<div class="card">
+<h3>Dashboard Ejecutivo Walmart</h3>
+<p>Diseño de dashboard con KPIs de ventas para toma de decisiones.</p>
+<a href="#">Ver proyecto</a>
+</div>
+
+<div class="card">
 <h3>Análisis de Tráfico Urbano</h3>
-<p>Relación entre congestión, población y PIB usando Python.</p>
+<p>Estudio de congestión vs PIB y población utilizando Python y Pandas.</p>
+<a href="#">Ver proyecto</a>
+</div>
 
+<div class="card">
+<h3>Limpieza de Datos Comerciales</h3>
+<p>Normalización, imputación y preparación de datasets para análisis.</p>
+<a href="#">Ver proyecto</a>
+</div>
+
+</div>
 </section>
 
-<section>
+<section class="card">
 <h2>Contacto</h2>
 <p>Email: tucorreo@gmail.com</p>
-<p>LinkedIn: <a href="#">Tu perfil</a></p>
+<p>LinkedIn: <a href="#">Tu LinkedIn</a></p>
 <p>GitHub: <a href="#">Tu GitHub</a></p>
 </section>
+
+</div>
+
+<footer>
+2026 | Kevin Villalpando
+</footer>
 
 </body>
 </html>
