@@ -1,1 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Dataset del Proyecto</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
+  <div class="container">
+
+    <h1>Dataset del proyecto</h1>
+
+    <p>En este proyecto contamos dos fuentes principales de información:</p>
+
+    <ol>
+      <li><span class="tag">tomtom_traffic.csv</span>: Datos sobre congestión vehicular.</li>
+      <li><span class="tag">oecd_city_economy.csv</span>: Indicadores económicos y ambientales.</li>
+    </ol>
+
+    <blockquote>
+      Ambas tablas se complementan para entender cómo la eficiencia del tráfico urbano se relaciona con el desempeño económico.
+    </blockquote>
+
+    <!-- Dataset 1 -->
+    <h2>Dataset 1: <span class="tag">tomtom_traffic.csv</span></h2>
+
+    <p>Información sobre niveles de tráfico en distintas ciudades.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Columna</th>
+          <th>Tipo de Dato</th>
+          <th>Descripción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="tag red">Country</span></td>
+          <td>STRING</td>
+          <td>Código ISO-3 del país</td>
+        </tr>
+        <tr>
+          <td><span class="tag red">City</span></td>
+          <td>STRING</td>
+          <td>Nombre de la ciudad</td>
+        </tr>
+        <tr>
+          <td><span class="tag red">UpdateTimeUTC</span></td>
+          <td>DATETIME</td>
+          <td>Fecha y hora de actualización</td>
+        </tr>
+        <tr>
+          <td><span class="tag red">JamsDelay</span></td>
+          <td>FLOAT</td>
+          <td>Retraso total en minutos</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Dataset 2 -->
+    <h2>Dataset 2: <span class="tag">oecd_city_economy.csv</span></h2>
+
+    <p>Indicadores económicos y ambientales por ciudad.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Columna</th>
+          <th>Tipo de Dato</th>
+          <th>Descripción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="tag red">Year</span></td>
+          <td>INTEGER</td>
+          <td>Año del registro</td>
+        </tr>
+        <tr>
+          <td><span class="tag red">City</span></td>
+          <td>STRING</td>
+          <td>Nombre de la ciudad</td>
+        </tr>
+        <tr>
+          <td><span class="tag red">Country</span></td>
+          <td>STRING</td>
+          <td>País</td>
+        </tr>
+        <tr>
+          <td><span class="tag red">City GDP/capita</span></td>
+          <td>FLOAT</td>
+          <td>PIB per cápita</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Summary -->
+    <h1>Project Summary</h1>
+    <p class="subtitle">Urban mobility and economic productivity in Latin American cities</p>
+
+    <div class="chart-placeholder">
+      <p>[ Gráfico aquí ]</p>
+    </div>
+
+  </div>
+
+</body>
+</html>
