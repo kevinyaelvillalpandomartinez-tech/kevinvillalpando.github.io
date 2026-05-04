@@ -1,93 +1,66 @@
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Fondo oscuro */
 body {
   background-color: #0d1117;
   color: #e6edf3;
-  font-family: "Segoe UI", Roboto, sans-serif;
-  line-height: 1.6;
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
 }
 
-/* Contenedor */
 .container {
-  width: 80%;
-  max-width: 1000px;
+  width: 85%;
+  max-width: 1100px;
   margin: 40px auto;
 }
 
-/* Títulos */
 h1 {
-  font-size: 2.2rem;
-  margin-bottom: 20px;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
 h2 {
   margin-top: 40px;
-  margin-bottom: 10px;
-  font-size: 1.5rem;
+  border-bottom: 1px solid #30363d;
+  padding-bottom: 5px;
 }
 
-/* Texto */
+h3 {
+  margin-bottom: 10px;
+}
+
 p {
-  margin-bottom: 15px;
   color: #c9d1d9;
 }
 
-.subtitle {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
+.intro {
+  margin-bottom: 30px;
 }
 
-/* Listas */
-ol {
-  margin-left: 20px;
+/* Cards */
+.card {
+  background-color: #161b22;
+  padding: 20px;
+  border-radius: 10px;
   margin-bottom: 20px;
-}
-
-/* Blockquote */
-blockquote {
-  border-left: 4px solid #30363d;
-  padding-left: 15px;
-  color: #8b949e;
-  margin: 20px 0;
 }
 
 /* Tablas */
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 15px;
-  background-color: #161b22;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-thead {
-  background-color: #21262d;
+  margin-top: 10px;
 }
 
 th, td {
-  padding: 12px 15px;
+  padding: 10px;
   border-bottom: 1px solid #30363d;
-  text-align: left;
 }
 
 th {
-  color: #e6edf3;
-}
-
-td {
-  color: #c9d1d9;
-}
-
-/* Tags tipo código */
-.tag {
   background-color: #21262d;
+}
+
+/* Tags */
+.tag {
+  background: #21262d;
   padding: 3px 8px;
   border-radius: 6px;
   font-family: monospace;
@@ -98,14 +71,26 @@ td {
   color: #ff7b72;
 }
 
-/* Gráfico placeholder */
-.chart-placeholder {
-  margin-top: 20px;
-  background-color: #f0f0f0;
-  color: #333;
+/* Lista de pasos */
+.steps li {
+  margin-bottom: 8px;
+}
+
+/* Gráfico */
+.chart {
   height: 300px;
+  background: #f0f0f0;
+  color: #333;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
+}
+
+/* Insights */
+.insights {
+  margin-top: 20px;
+  background-color: #161b22;
+  padding: 15px;
+  border-left: 4px solid #58a6ff;
 }
