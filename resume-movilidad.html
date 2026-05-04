@@ -1,112 +1,159 @@
 <!DOCTYPE html>
-
-
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Dataset del Proyecto</title>
+  <title>Movilidad urbana y productividad económica</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <div class="container">
+<div class="container">
 
-    <h1>Dataset del proyecto</h1>
+  <!-- HEADER -->
+  <h1>Proyecto 5: Movilidad urbana y productividad económica</h1>
 
-    <p>En este proyecto contamos dos fuentes principales de información:</p>
+  <p class="intro">
+    Análisis desarrollado para el American Development Bank con el objetivo de entender
+    la relación entre congestión urbana y productividad económica en ciudades globales.
+  </p>
 
-    <ol>
-      <li><span class="tag">tomtom_traffic.csv</span>: Datos sobre congestión vehicular.</li>
-      <li><span class="tag">oecd_city_economy.csv</span>: Indicadores económicos y ambientales.</li>
-    </ol>
+  <!-- OBJETIVO -->
+  <section>
+    <h2>🎯 Objetivo del análisis</h2>
+    <p>
+      Identificar ciudades donde la inversión en infraestructura de transporte pueda
+      mejorar la productividad económica y el bienestar de la población.
+    </p>
+  </section>
 
-    <blockquote>
-      Ambas tablas se complementan para entender cómo la eficiencia del tráfico urbano se relaciona con el desempeño económico.
-    </blockquote>
+  <!-- PREGUNTAS -->
+  <section>
+    <h2>💡 Preguntas del negocio</h2>
+    <ul>
+      <li>¿Qué ciudades presentan alta congestión y baja productividad?</li>
+      <li>¿Qué ciudades combinan buena movilidad y economía fuerte?</li>
+      <li>¿Qué variables se relacionan con el desarrollo urbano?</li>
+    </ul>
+  </section>
 
-    <!-- Dataset 1 -->
-    <h2>Dataset 1: <span class="tag">tomtom_traffic.csv</span></h2>
+  <!-- DATASETS -->
+  <section>
+    <h2>📊 Fuentes de datos</h2>
 
-    <p>Información sobre niveles de tráfico en distintas ciudades.</p>
+    <div class="card">
+      <h3><span class="tag">tomtom_traffic.csv</span></h3>
+      <p>Datos de tráfico en tiempo real y congestión urbana.</p>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Columna</th>
-          <th>Tipo de Dato</th>
-          <th>Descripción</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><span class="tag red">Country</span></td>
-          <td>STRING</td>
-          <td>Código ISO-3 del país</td>
-        </tr>
-        <tr>
-          <td><span class="tag red">City</span></td>
-          <td>STRING</td>
-          <td>Nombre de la ciudad</td>
-        </tr>
-        <tr>
-          <td><span class="tag red">UpdateTimeUTC</span></td>
-          <td>DATETIME</td>
-          <td>Fecha y hora de actualización</td>
-        </tr>
-        <tr>
-          <td><span class="tag red">JamsDelay</span></td>
-          <td>FLOAT</td>
-          <td>Retraso total en minutos</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <!-- Dataset 2 -->
-    <h2>Dataset 2: <span class="tag">oecd_city_economy.csv</span></h2>
-
-    <p>Indicadores económicos y ambientales por ciudad.</p>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Columna</th>
-          <th>Tipo de Dato</th>
-          <th>Descripción</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><span class="tag red">Year</span></td>
-          <td>INTEGER</td>
-          <td>Año del registro</td>
-        </tr>
-        <tr>
-          <td><span class="tag red">City</span></td>
-          <td>STRING</td>
-          <td>Nombre de la ciudad</td>
-        </tr>
-        <tr>
-          <td><span class="tag red">Country</span></td>
-          <td>STRING</td>
-          <td>País</td>
-        </tr>
-        <tr>
-          <td><span class="tag red">City GDP/capita</span></td>
-          <td>FLOAT</td>
-          <td>PIB per cápita</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <!-- Summary -->
-    <h1>Project Summary</h1>
-    <p class="subtitle">Urban mobility and economic productivity in Latin American cities</p>
-
-    <div class="chart-placeholder">
-      <p>[ Gráfico aquí ]</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Columna</th>
+            <th>Tipo</th>
+            <th>Descripción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="tag red">City</span></td>
+            <td>STRING</td>
+            <td>Ciudad monitoreada</td>
+          </tr>
+          <tr>
+            <td><span class="tag red">JamsDelay</span></td>
+            <td>FLOAT</td>
+            <td>Minutos de retraso por congestión</td>
+          </tr>
+          <tr>
+            <td><span class="tag red">TrafficIndexLive</span></td>
+            <td>FLOAT</td>
+            <td>Nivel de congestión (0–100)</td>
+          </tr>
+          <tr>
+            <td><span class="tag red">MinsDelay</span></td>
+            <td>FLOAT</td>
+            <td>Retraso promedio por 10 km</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
-  </div>
+    <div class="card">
+      <h3><span class="tag">oecd_city_economy.csv</span></h3>
+      <p>Indicadores económicos y sociales urbanos.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Columna</th>
+            <th>Tipo</th>
+            <th>Descripción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="tag red">City GDP/capita</span></td>
+            <td>FLOAT</td>
+            <td>PIB per cápita</td>
+          </tr>
+          <tr>
+            <td><span class="tag red">Unemployment %</span></td>
+            <td>FLOAT</td>
+            <td>Desempleo</td>
+          </tr>
+          <tr>
+            <td><span class="tag red">Population</span></td>
+            <td>FLOAT</td>
+            <td>Población</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </section>
+
+  <!-- PROCESO -->
+  <section>
+    <h2>⚙️ Metodología</h2>
+
+    <ol class="steps">
+      <li>Carga y exploración de datos</li>
+      <li>Limpieza y estandarización</li>
+      <li>Filtrado del año 2024</li>
+      <li>Agregación por ciudad</li>
+      <li>Unión de datasets</li>
+      <li>Análisis exploratorio</li>
+    </ol>
+  </section>
+
+  <!-- RESULTADOS -->
+  <section>
+    <h2>📈 Resultados</h2>
+
+    <div class="chart">
+      <p>[Inserta aquí tu gráfico de matplotlib o seaborn]</p>
+    </div>
+
+    <div class="insights">
+      <h3>🔎 Hallazgos clave</h3>
+      <ul>
+        <li>Ciudades con alta congestión tienden a menor productividad.</li>
+        <li>El PIB per cápita se relaciona negativamente con el retraso.</li>
+        <li>El desempleo aumenta en ciudades con tráfico ineficiente.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CONCLUSIÓN -->
+  <section>
+    <h2>🧠 Conclusión</h2>
+    <p>
+      La movilidad urbana es un factor crítico para el desarrollo económico.
+      Invertir en infraestructura de transporte puede mejorar significativamente
+      la productividad y calidad de vida.
+    </p>
+  </section>
+
+</div>
 
 </body>
 </html>
