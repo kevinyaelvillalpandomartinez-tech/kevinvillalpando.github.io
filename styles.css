@@ -1,110 +1,111 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Dataset del Proyecto</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <div class="container">
+/* Fondo oscuro */
+body {
+  background-color: #0d1117;
+  color: #e6edf3;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+}
 
-    <h1>Dataset del proyecto</h1>
+/* Contenedor */
+.container {
+  width: 80%;
+  max-width: 1000px;
+  margin: 40px auto;
+}
 
-    <p>En este proyecto contamos dos fuentes principales de información:</p>
+/* Títulos */
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
 
-    <ol>
-      <li><span class="tag">tomtom_traffic.csv</span>: Datos sobre congestión vehicular.</li>
-      <li><span class="tag">oecd_city_economy.csv</span>: Indicadores económicos y ambientales.</li>
-    </ol>
+h2 {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
 
-    <blockquote>
-      Ambas tablas se complementan para entender cómo la eficiencia del tráfico urbano se relaciona con el desempeño económico.
-    </blockquote>
+/* Texto */
+p {
+  margin-bottom: 15px;
+  color: #c9d1d9;
+}
 
-    <!-- Dataset 1 -->
-    <h2>Dataset 1: <span class="tag">tomtom_traffic.csv</span></h2>
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
 
-    <p>Información sobre niveles de tráfico en distintas ciudades.</p>
+/* Listas */
+ol {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
 
-    <table>
-      <thead>
-        <tr>
-          <th>Columna</th>
-          <th>Tipo de Dato</th>
-          <th>Descripción</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><span class="tag red">Country</span></td>
-          <td>STRING</td>
-          <td>Código ISO-3 del país</td>
-        </tr>
-        <tr>
-          <td><span class="tag red">City</span></td>
-          <td>STRING</td>
-          <td>Nombre de la ciudad</td>
-        </tr>
-        <tr>
-          <td><span class="tag red">UpdateTimeUTC</span></td>
-          <td>DATETIME</td>
-          <td>Fecha y hora de actualización</td>
-        </tr>
-        <tr>
-          <td><span class="tag red">JamsDelay</span></td>
-          <td>FLOAT</td>
-          <td>Retraso total en minutos</td>
-        </tr>
-      </tbody>
-    </table>
+/* Blockquote */
+blockquote {
+  border-left: 4px solid #30363d;
+  padding-left: 15px;
+  color: #8b949e;
+  margin: 20px 0;
+}
 
-    <!-- Dataset 2 -->
-    <h2>Dataset 2: <span class="tag">oecd_city_economy.csv</span></h2>
+/* Tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  background-color: #161b22;
+  border-radius: 8px;
+  overflow: hidden;
+}
 
-    <p>Indicadores económicos y ambientales por ciudad.</p>
+thead {
+  background-color: #21262d;
+}
 
-    <table>
-      <thead>
-        <tr>
-          <th>Columna</th>
-          <th>Tipo de Dato</th>
-          <th>Descripción</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><span class="tag red">Year</span></td>
-          <td>INTEGER</td>
-          <td>Año del registro</td>
-        </tr>
-        <tr>
-          <td><span class="tag red">City</span></td>
-          <td>STRING</td>
-          <td>Nombre de la ciudad</td>
-        </tr>
-        <tr>
-          <td><span class="tag red">Country</span></td>
-          <td>STRING</td>
-          <td>País</td>
-        </tr>
-        <tr>
-          <td><span class="tag red">City GDP/capita</span></td>
-          <td>FLOAT</td>
-          <td>PIB per cápita</td>
-        </tr>
-      </tbody>
-    </table>
+th, td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #30363d;
+  text-align: left;
+}
 
-    <!-- Summary -->
-    <h1>Project Summary</h1>
-    <p class="subtitle">Urban mobility and economic productivity in Latin American cities</p>
+th {
+  color: #e6edf3;
+}
 
-    <div class="chart-placeholder">
-      <p>[ Gráfico aquí ]</p>
-    </div>
+td {
+  color: #c9d1d9;
+}
 
-  </div>
+/* Tags tipo código */
+.tag {
+  background-color: #21262d;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-family: monospace;
+  color: #58a6ff;
+}
 
-</body>
-</html>
+.tag.red {
+  color: #ff7b72;
+}
+
+/* Gráfico placeholder */
+.chart-placeholder {
+  margin-top: 20px;
+  background-color: #f0f0f0;
+  color: #333;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
