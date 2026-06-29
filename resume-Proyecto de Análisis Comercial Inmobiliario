@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Proyecto Andes Capital Real Estate</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f3f4f6;
+    color:#1f2937;
+}
+
+.container{
+    width:90%;
+    max-width:1150px;
+    margin:40px auto;
+}
+
+.hero{
+    background:linear-gradient(135deg,#1f2937,#374151);
+    color:white;
+    text-align:center;
+    padding:50px 30px;
+    border-radius:22px;
+    margin-bottom:30px;
+}
+
+.hero h1{
+    margin:0;
+    font-size:36px;
+}
+
+.hero p{
+    font-size:20px;
+}
+
+.score{
+    display:inline-block;
+    background:#facc15;
+    color:#1f2937;
+    padding:10px 18px;
+    border-radius:20px;
+    font-weight:bold;
+}
+
+section{
+    background:white;
+    padding:32px;
+    border-radius:18px;
+    margin-bottom:26px;
+    box-shadow:0 4px 14px rgba(0,0,0,.08);
+}
+
+h2{
+    border-left:6px solid #2563eb;
+    padding-left:12px;
+    margin-top:0;
+}
+
+.grid,
+.kpi-grid,
+.insights,
+.recommendations{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:18px;
+}
+
+.card,
+.dataset,
+.insight,
+.recommendations div{
+    background:#f9fafb;
+    border:1px solid #e5e7eb;
+    padding:20px;
+    border-radius:14px;
+}
+
+.kpi{
+    background:#eff6ff;
+    padding:24px;
+    border-radius:16px;
+    text-align:center;
+    border:1px solid #bfdbfe;
+}
+
+.kpi h3{
+    font-size:30px;
+    color:#2563eb;
+    margin:0;
+}
+
+.warning{
+    background:#fef3c7;
+    border-left:6px solid #f59e0b;
+    padding:18px;
+    border-radius:12px;
+    margin-top:20px;
+}
+
+.model{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:16px;
+    margin:25px 0;
+}
+
+.model div{
+    background:#e0f2fe;
+    padding:18px;
+    border-radius:12px;
+    text-align:center;
+    font-weight:bold;
+}
+
+.fact{
+    background:#2563eb!important;
+    color:white;
+}
+
+.dashboard-card{
+    background:#fafafa;
+    border:1px solid #ddd;
+    padding:25px;
+    border-radius:16px;
+    margin-bottom:25px;
+}
+
+.dashboard-card img{
+    width:100%;
+    border-radius:12px;
+    margin-top:15px;
+}
+
+.tools{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.tools span{
+    background:#2563eb;
+    color:white;
+    padding:10px 18px;
+    border-radius:20px;
+    font-weight:bold;
+}
+
+footer{
+    text-align:center;
+    margin:50px 0;
+    color:#6b7280;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:28px;
+}
+
+section{
+    padding:22px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto Andes Capital Real Estate</title>
+  <link rel="stylesheet" href="styles-andes.css">
+</head>
+<body>
+
+  <main class="container">
+
+    <header class="hero">
+      <h1>🏢 Estrategia Comercial de Andes Capital Real Estate</h1>
+      <p>Proyecto de Análisis Comercial Inmobiliario — Grupo Andes</p>
+      <span class="score">Evaluación final: 92 / 100 puntos</span>
+    </header>
+
+    <section>
+      <h2>📌 Descripción del Proyecto</h2>
+      <p>
+        Este proyecto analiza el desempeño comercial de una empresa inmobiliaria ficticia llamada
+        Grupo Andes, con el objetivo de construir un dashboard ejecutivo que permita evaluar ventas,
+        ingresos, clientes, propiedades, canales comerciales y recurrencia de clientes.
+      </p>
+    </section>
+
+    <section>
+      <h2>🎯 Objetivo</h2>
+      <p>
+        Construir un análisis comercial inmobiliario que apoye la toma de decisiones estratégicas
+        mediante limpieza de datos, modelado en esquema estrella, creación de medidas de negocio,
+        análisis temporal, cohortes y visualización ejecutiva en Power BI.
+      </p>
+    </section>
+
+    <section>
+      <h2>❓ Preguntas de Negocio</h2>
+      <div class="grid">
+        <div class="card">¿Cuánto ingreso total generó la empresa?</div>
+        <div class="card">¿Cuántas propiedades se vendieron?</div>
+        <div class="card">¿Cuál fue el ticket promedio de venta?</div>
+        <div class="card">¿Qué tipo de propiedad genera más ingresos?</div>
+        <div class="card">¿Qué canal de venta tiene mejor desempeño?</div>
+        <div class="card">¿Los clientes vuelven a comprar?</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>📊 KPIs Principales</h2>
+      <div class="kpi-grid">
+        <div class="kpi">
+          <h3>$6,012 M</h3>
+          <p>Ingreso total aproximado</p>
+        </div>
+
+        <div class="kpi">
+          <h3>9 mil</h3>
+          <p>Transacciones inmobiliarias</p>
+        </div>
+
+        <div class="kpi">
+          <h3>$707,353</h3>
+          <p>Ticket promedio</p>
+        </div>
+
+        <div class="kpi">
+          <h3>$200 M</h3>
+          <p>Comisión total aproximada</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>📂 Datasets Utilizados</h2>
+
+      <div class="dataset">
+        <h3>hecho_ventas_propiedades</h3>
+        <p>Tabla principal con fecha de venta, cliente, propiedad, precio, canal y comisión.</p>
+      </div>
+
+      <div class="dataset">
+        <h3>dim_clientes</h3>
+        <p>Tabla dimensional con información de segmentación y comportamiento de clientes.</p>
+      </div>
+
+      <div class="dataset">
+        <h3>dim_propiedades</h3>
+        <p>Contiene tipo de propiedad, ciudad, ubicación, tamaño y características comerciales.</p>
+      </div>
+
+      <div class="dataset">
+        <h3>dim_fecha</h3>
+        <p>Tabla calendario usada para análisis temporal: año, mes, número de mes y año-mes.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>🧹 Limpieza y Preparación de Datos</h2>
+      <ul>
+        <li>Conversión de <strong>fecha_venta</strong> a formato fecha.</li>
+        <li>Validación de campos numéricos.</li>
+        <li>Conversión de <strong>porcentaje_comision</strong> a formato porcentaje.</li>
+        <li>Revisión de duplicados en claves primarias.</li>
+        <li>Validación de relaciones entre tablas.</li>
+        <li>Revisión de consistencia para el modelado del dashboard.</li>
+      </ul>
+
+      <div class="warning">
+        Oportunidad de mejora: documentar con mayor detalle la revisión de valores nulos.
+      </div>
+    </section>
+
+    <section>
+      <h2>🧩 Modelado de Datos</h2>
+      <p>
+        El modelo fue estructurado como un esquema estrella, usando la tabla de ventas como tabla
+        central y conectándola con tablas dimensionales.
+      </p>
+
+      <div class="model">
+        <div>dim_clientes</div>
+        <div>dim_propiedades</div>
+        <div class="fact">hecho_ventas_propiedades</div>
+        <div>dim_fecha</div>
+      </div>
+
+      <ul>
+        <li>Relaciones uno a muchos 1:*.</li>
+        <li>Dirección de filtro simple.</li>
+        <li>Relaciones activas.</li>
+        <li>Claves correctamente relacionadas.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📈 Estructura del Dashboard</h2>
+
+      <div class="dashboard-card">
+        <h3>1. Overview Ejecutivo</h3>
+        <p>
+          Vista enfocada en ingreso total, cantidad de ventas, ticket promedio, comisión total,
+          tendencia temporal, ingresos por ciudad y crecimiento YoY.
+        </p>
+        <img src="images/overview-andes.png" alt="Dashboard overview ejecutivo Andes Capital">
+      </div>
+
+      <div class="dashboard-card">
+        <h3>2. Análisis Comercial</h3>
+        <p>
+          Vista enfocada en ingresos por tipo de propiedad, canal de venta, segmento de cliente,
+          formato condicional y tooltips con participación porcentual.
+        </p>
+        <img src="images/analisis-comercial-andes.png" alt="Dashboard análisis comercial Andes Capital">
+      </div>
+
+      <div class="dashboard-card">
+        <h3>3. Análisis de Cohortes</h3>
+        <p>
+          Vista enfocada en matriz de cohortes, mes de cohorte, mes de venta e identificación
+          de recurrencia de clientes.
+        </p>
+        <img src="images/cohortes-andes.png" alt="Dashboard análisis de cohortes Andes Capital">
+      </div>
+    </section>
+
+    <section>
+      <h2>🔎 Hallazgos Principales</h2>
+
+      <div class="insights">
+        <div class="insight">Las casas fueron el tipo de propiedad con mayor contribución al revenue.</div>
+        <div class="insight">Ciudad de México concentró el mayor volumen de operaciones.</div>
+        <div class="insight">El canal Corredor fue el canal con mayor generación de ingresos.</div>
+        <div class="insight">Las cohortes del primer cuatrimestre de 2023 mostraron mayor recurrencia.</div>
+        <div class="insight">El crecimiento YoY fue moderado, cercano al 1.11%.</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>💡 Insights Accionables</h2>
+      <ul>
+        <li>Priorizar campañas e inventario hacia casas por su alta contribución al ingreso.</li>
+        <li>Usar el canal Corredor como referencia para optimizar otros canales.</li>
+        <li>Replicar estrategias de captación usadas en las cohortes con mayor recurrencia.</li>
+        <li>Reducir dependencia comercial de una sola ciudad o canal.</li>
+        <li>Incrementar la retención para elevar el valor de vida del cliente.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>✅ Recomendaciones Estratégicas</h2>
+      <div class="recommendations">
+        <div>Fortalecer el canal Corredor.</div>
+        <div>Implementar seguimiento postventa.</div>
+        <div>Diversificar canales comerciales.</div>
+        <div>Expandir ciudades con potencial de crecimiento.</div>
+        <div>Validar el cálculo YoY antes de usarlo como KPI final.</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>🛠️ Herramientas Utilizadas</h2>
+      <div class="tools">
+        <span>Power BI</span>
+        <span>DAX</span>
+        <span>Modelo estrella</span>
+        <span>Análisis de cohortes</span>
+        <span>Visualización de datos</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>🚀 Conclusión</h2>
+      <p>
+        Este proyecto demuestra la capacidad de transformar datos inmobiliarios en información útil
+        para la toma de decisiones comerciales. A través del dashboard, Grupo Andes puede identificar
+        sus principales fuentes de ingreso, evaluar ventas, detectar recurrencia de clientes y tomar
+        decisiones enfocadas en crecimiento, rentabilidad y retención.
+      </p>
+    </section>
+
+    <footer>
+      <p><strong>Kevin Yael Villalpando Martínez</strong></p>
+      <p>Data Analyst Jr. | Power BI • SQL • Python</p>
+    </footer>
+
+  </main>
+
+</body>
+</html>
+
+</body>
+
+</html>
