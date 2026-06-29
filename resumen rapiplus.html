@@ -1,1 +1,464 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RappiPlus Analytics</title>
 
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f6f8;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1150px;
+      margin: 40px auto;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #ff441f, #ff6b35);
+      color: white;
+      text-align: center;
+      padding: 55px 30px;
+      border-radius: 24px;
+      margin-bottom: 30px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: 38px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 0;
+    }
+
+    section {
+      background: white;
+      padding: 32px;
+      border-radius: 18px;
+      margin-bottom: 26px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+      margin-top: 0;
+      border-left: 6px solid #ff441f;
+      padding-left: 12px;
+      color: #111827;
+    }
+
+    h3 {
+      color: #ff441f;
+      margin-bottom: 8px;
+    }
+
+    .grid,
+    .kpi-grid,
+    .skills-grid,
+    .datasets-grid,
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 18px;
+    }
+
+    .card,
+    .dataset,
+    .step,
+    .skill {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      padding: 20px;
+      border-radius: 14px;
+    }
+
+    .kpi {
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      text-align: center;
+      padding: 24px;
+      border-radius: 16px;
+    }
+
+    .kpi h3 {
+      font-size: 30px;
+      margin: 0;
+      color: #ea580c;
+    }
+
+    .kpi p {
+      margin-bottom: 0;
+      font-weight: bold;
+    }
+
+    .funnel {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 450px;
+      margin: 20px auto;
+      text-align: center;
+    }
+
+    .funnel div {
+      background: #ff441f;
+      color: white;
+      padding: 14px;
+      border-radius: 12px;
+      font-weight: bold;
+    }
+
+    .arrow {
+      color: #ff441f;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .tools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .tools span {
+      background: #ff441f;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+
+    .code-box {
+      background: #111827;
+      color: #f9fafb;
+      padding: 20px;
+      border-radius: 14px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+    }
+
+    .highlight {
+      background: #fff7ed;
+      border-left: 6px solid #ff441f;
+      padding: 18px;
+      border-radius: 12px;
+      margin-top: 18px;
+    }
+
+    .dashboard-img {
+      width: 100%;
+      max-width: 900px;
+      display: block;
+      margin: 20px auto 0;
+      border-radius: 14px;
+      border: 1px solid #d1d5db;
+    }
+
+    footer {
+      text-align: center;
+      padding: 35px;
+      color: #4b5563;
+    }
+
+    footer a {
+      color: #ff441f;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media(max-width: 768px) {
+      .hero h1 {
+        font-size: 28px;
+      }
+
+      section {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="container">
+
+    <header class="hero">
+      <h1>📊 RappiPlus Analytics</h1>
+      <p>Diagnóstico Estratégico Integral: De Datos a Decisiones de Negocio</p>
+    </header>
+
+    <section>
+      <h2>📌 Descripción del Proyecto</h2>
+      <p>
+        Este proyecto simula el trabajo de un Data Analyst dentro de una empresa de delivery llamada
+        <strong>RappiPlus</strong>. El objetivo es transformar datos provenientes de ventas, marketing,
+        comportamiento de usuarios y experimentos A/B en información accionable para mejorar la rentabilidad,
+        optimizar el embudo de conversión y aumentar la retención de clientes.
+      </p>
+
+      <div class="highlight">
+        El proyecto integra limpieza de datos, análisis exploratorio, KPIs de negocio, SQL, cohortes,
+        pruebas estadísticas A/B y storytelling con dashboards.
+      </div>
+    </section>
+
+    <section>
+      <h2>🎯 Objetivos del Proyecto</h2>
+      <div class="grid">
+        <div class="card">¿El negocio es rentable?</div>
+        <div class="card">¿Qué productos generan mayor utilidad?</div>
+        <div class="card">¿Dónde abandonan los usuarios?</div>
+        <div class="card">¿Los clientes regresan después de registrarse?</div>
+        <div class="card">¿La nueva interfaz mejora la conversión?</div>
+        <div class="card">¿Qué debe visualizar la dirección para decidir mejor?</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>📊 KPIs del Proyecto</h2>
+      <div class="kpi-grid">
+        <div class="kpi">
+          <h3>Revenue</h3>
+          <p>Ingresos generados</p>
+        </div>
+
+        <div class="kpi">
+          <h3>Profit</h3>
+          <p>Utilidad del negocio</p>
+        </div>
+
+        <div class="kpi">
+          <h3>Margen</h3>
+          <p>Rentabilidad</p>
+        </div>
+
+        <div class="kpi">
+          <h3>Conversión</h3>
+          <p>Avance en funnel</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>🛠 Tecnologías Utilizadas</h2>
+      <div class="tools">
+        <span>Python</span>
+        <span>Pandas</span>
+        <span>NumPy</span>
+        <span>Matplotlib</span>
+        <span>SQL</span>
+        <span>Power BI</span>
+        <span>Tableau</span>
+        <span>Jupyter Notebook</span>
+        <span>Git</span>
+        <span>GitHub</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>📂 Fuentes de Datos</h2>
+
+      <div class="datasets-grid">
+        <div class="dataset">
+          <h3>Orders</h3>
+          <p>Información de pedidos: fecha, producto, cantidad, precio, revenue, costo y profit.</p>
+        </div>
+
+        <div class="dataset">
+          <h3>Catálogo</h3>
+          <p>Información de productos: categoría, proveedor y costo unitario.</p>
+        </div>
+
+        <div class="dataset">
+          <h3>Marketing</h3>
+          <p>Inversión publicitaria por canal, país y gasto.</p>
+        </div>
+
+        <div class="dataset">
+          <h3>Eventos</h3>
+          <p>Comportamiento de usuarios dentro de la app: Home, Search, Product, Cart, Checkout y Purchase.</p>
+        </div>
+
+        <div class="dataset">
+          <h3>Usuarios</h3>
+          <p>Información utilizada para calcular retención y cohortes.</p>
+        </div>
+
+        <div class="dataset">
+          <h3>Experimento A/B</h3>
+          <p>Comparación entre grupo Control y Tratamiento para evaluar la nueva interfaz de checkout.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>📈 Desarrollo del Proyecto</h2>
+
+      <div class="steps-grid">
+        <div class="step">
+          <h3>1️⃣ Calidad de Datos</h3>
+          <p>
+            Conversión de fechas, revisión de nulos, eliminación de duplicados, corrección de valores negativos,
+            validación de montos y estandarización de categorías.
+          </p>
+        </div>
+
+        <div class="step">
+          <h3>2️⃣ Rentabilidad</h3>
+          <p>
+            Cálculo de revenue total, costos, profit, margen, ticket promedio, productos más vendidos
+            y categorías más rentables.
+          </p>
+        </div>
+
+        <div class="step">
+          <h3>3️⃣ Funnel de Conversión</h3>
+          <p>
+            Análisis con SQL para detectar en qué etapas del recorrido los usuarios abandonan la aplicación.
+          </p>
+        </div>
+
+        <div class="step">
+          <h3>4️⃣ Cohortes</h3>
+          <p>
+            Medición de usuarios recurrentes, tasa de retención, semanas con mayor abandono
+            y comportamiento por cohorte.
+          </p>
+        </div>
+
+        <div class="step">
+          <h3>5️⃣ Prueba A/B</h3>
+          <p>
+            Evaluación estadística de la nueva interfaz de checkout mediante diferencia de proporciones
+            entre Control y Tratamiento.
+          </p>
+        </div>
+
+        <div class="step">
+          <h3>6️⃣ Dashboard Ejecutivo</h3>
+          <p>
+            Diseño de visualizaciones para comunicar revenue, profit, costos, marketing, conversión,
+            retención y principales KPIs.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>🔄 Funnel de Conversión</h2>
+
+      <div class="funnel">
+        <div>Home</div>
+        <span class="arrow">↓</span>
+        <div>Search</div>
+        <span class="arrow">↓</span>
+        <div>Product</div>
+        <span class="arrow">↓</span>
+        <div>Cart</div>
+        <span class="arrow">↓</span>
+        <div>Checkout</div>
+        <span class="arrow">↓</span>
+        <div>Purchase</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>🧪 Prueba A/B</h2>
+      <p>
+        Se evaluó una nueva versión del checkout comparando el comportamiento de usuarios del grupo
+        <strong>Control</strong> contra el grupo <strong>Tratamiento</strong>. El objetivo fue determinar
+        si la nueva interfaz incrementa la conversión de forma estadísticamente significativa.
+      </p>
+
+      <div class="highlight">
+        La decisión se basa en evidencia estadística, no solo en diferencias observadas entre porcentajes.
+      </div>
+    </section>
+
+    <section>
+      <h2>📊 Dashboard Ejecutivo</h2>
+      <p>
+        El dashboard está diseñado para facilitar la toma de decisiones de negocio, mostrando métricas clave
+        de rentabilidad, conversión, retención y desempeño comercial.
+      </p>
+
+      <img src="images/dashboard-rappiplus.png" alt="Dashboard ejecutivo RappiPlus Analytics" class="dashboard-img">
+    </section>
+
+    <section>
+      <h2>✅ Habilidades Demostradas</h2>
+      <div class="skills-grid">
+        <div class="skill">Limpieza de datos</div>
+        <div class="skill">Exploratory Data Analysis</div>
+        <div class="skill">KPIs de negocio</div>
+        <div class="skill">SQL</div>
+        <div class="skill">Python</div>
+        <div class="skill">Estadística</div>
+        <div class="skill">Pruebas A/B</div>
+        <div class="skill">Funnel de conversión</div>
+        <div class="skill">Cohortes</div>
+        <div class="skill">Storytelling con datos</div>
+        <div class="skill">Power BI</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>💡 Principales Aprendizajes</h2>
+      <ul>
+        <li>La calidad de datos es la base para cualquier análisis confiable.</li>
+        <li>Los KPIs permiten evaluar rentabilidad y desempeño del negocio.</li>
+        <li>El funnel ayuda a detectar puntos críticos de abandono.</li>
+        <li>Las cohortes permiten medir retención y fidelización.</li>
+        <li>Las pruebas A/B permiten tomar decisiones basadas en evidencia estadística.</li>
+        <li>El storytelling con dashboards facilita la comunicación ejecutiva.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🚀 Cómo Ejecutar el Proyecto</h2>
+
+      <div class="code-box">
+        git clone https://github.com/TU-USUARIO/RappiPlus-Analytics.git<br>
+        cd RappiPlus-Analytics<br>
+        pip install -r requirements.txt<br>
+        jupyter notebook
+      </div>
+
+      <p>Abrir el notebook principal:</p>
+      <div class="code-box">Kevin.ipynb</div>
+    </section>
+
+    <footer>
+      <p><strong>Kevin Yael Villalpando Martínez</strong></p>
+      <p>Junior Data Analyst | Python • SQL • Power BI • Excel • GitHub</p>
+
+      <p>
+        🌐 <a href="https://kevinyaelvillalpandomartinez-tech.github.io/kevinvillalpando.github.io/" target="_blank">Portafolio</a>
+      </p>
+
+      <p>
+        💼 <a href="https://www.linkedin.com/in/kevin-yael-villalpando-martinez-518272405/" target="_blank">LinkedIn</a>
+      </p>
+    </footer>
+
+  </main>
+
+</body>
+</html>
